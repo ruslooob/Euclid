@@ -1,0 +1,55 @@
+@import "mixins.scss";
+
+// 1100 px надо показывать бургер
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 5px;
+	.logo {
+		display: flex;
+		align-items: center;
+		padding: 5px;
+		// position: relative;
+		a {
+			&:nth-child(even) {
+				margin-left: 10px;
+			}
+			img {
+				object-fit: contain;
+			}
+		}
+	}
+	.nav {
+		display: flex;
+		align-items: center;
+		&__link {
+			text-align: center;
+			margin-right: calc(40rem / 16); //85px
+			padding: 20px;
+
+			text-decoration: none;
+			color: #333333;
+
+			transition: background-color 0.2s linear;
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover {
+				background-color: rgba($color: #333333, $alpha: 0.05);
+			}
+		}
+		&__search {
+			padding: 5px 5px 3px;
+			border-radius: 100%;
+			display: flex;
+			align-items: center;
+
+			transition: background-color 0.2s linear;
+			&:hover {
+				background-color: rgba($color: #333333, $alpha: 0.1);
+			}
+		}
+	}
+}
