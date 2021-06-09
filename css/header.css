@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   display: flex;
   justify-content: space-between;
@@ -11,6 +12,7 @@
   display: flex;
   align-items: center;
   padding: 5px;
+  align-self: start;
 }
 
 .header .logo a:nth-child(even) {
@@ -61,9 +63,12 @@
   align-items: center;
   height: 50px;
   width: 50px;
-  background-color: yellow;
+  background-color: #ff9900;
   cursor: pointer;
   display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .header .burger .top,
@@ -85,6 +90,14 @@
   }
   header.header nav.nav .burger {
     display: flex;
+  }
+}
+
+/* на случай, если кто-то
+ додумается прожать бургер и увеличить экран*/
+@media (min-width: 1100px) {
+  .nav__link {
+    display: inline !important;
   }
 }
 

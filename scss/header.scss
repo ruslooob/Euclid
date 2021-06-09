@@ -12,6 +12,7 @@
 		display: flex;
 		align-items: center;
 		padding: 5px;
+		align-self: start;
 		// position: relative;
 		a {
 			&:nth-child(even) {
@@ -59,9 +60,12 @@
 		align-items: center;
 		height: 50px;
 		width: 50px;
-		background-color: yellow;
+		background-color: #ff9900;
 		cursor: pointer;
 		display: none;
+		position: absolute;
+		right: 20px;
+		top: 20px;
 		.top,
 		.middle,
 		.bottom {
@@ -79,10 +83,21 @@
 		display: none;
 	}
 	.nav__search {
+		// стили, сгенерированные
+		// препроцессором перебивают этот
 		display: none !important;
 	}
 	header.header nav.nav .burger {
 		display: flex;
+	}
+}
+/* на случай, если кто-то
+ додумается прожать бургер и увеличить экран*/
+@media (min-width: 1100px) {
+	.nav__link {
+		// стили, сгенерированные
+		// препроцессором перебивают этот
+		display: inline !important;
 	}
 }
 
